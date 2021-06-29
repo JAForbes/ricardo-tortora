@@ -8,6 +8,7 @@
     <title>Document</title>
     <style>
         @import url("fonts/circular/stylesheet.css");
+
         *, *::after, *::before {
             box-sizing: border-box;
             margin: 0;
@@ -61,9 +62,10 @@
             top: 40%;
             transform: translateY(-40%);
             z-index: 2;
-            width: 65%;
+            width: 95%;
+            max-width: 650px;
             /* height: 100%; */
-            max-height: 100%;
+            max-height: 99%;
             /* margin: 10%; */
             background: #FFFFFF;
             border-radius: 16px;
@@ -123,7 +125,7 @@
         }
 
         .form-label {
-            margin: 24px 0 16px 0;
+            margin: 0 0 16px 0;
             font-family: Circular Std;
             font-style: normal;
             font-weight: bold;
@@ -142,6 +144,7 @@
             letter-spacing: -0.428571px;
             color: #D8D6DE;
         }
+
         :-ms-input-placeholder { /* IE 10+ */
             font-family: Circular Std;
             font-style: normal;
@@ -151,6 +154,7 @@
             letter-spacing: -0.428571px;
             color: #D8D6DE;
         }
+
         ::-moz-placeholder { /* Firefox 19+ */
             font-family: Circular Std;
             font-style: normal;
@@ -160,6 +164,7 @@
             letter-spacing: -0.428571px;
             color: #D8D6DE;
         }
+
         :-moz-placeholder { /* Firefox 4 - 18 */
             font-family: Circular Std;
             font-style: normal;
@@ -172,6 +177,7 @@
 
 
         .form-input {
+            margin-bottom: 24px;
             width: 100%;
             height: 80px;
             outline: none;
@@ -187,10 +193,16 @@
             letter-spacing: -0.428571px;
             color: #6E6B7B;;
         }
-        .eye-off::after{
+
+        .eye-off::after {
             content: "555555";
 
         }
+
+        .form-div p {
+            margin-bottom: 14px;
+        }
+
         input[name='company_list'] {
             width: 500px;
         }
@@ -198,14 +210,17 @@
         .red {
             color: #E6967A;
         }
-        .blue{
+
+        .blue {
             color: #4881EF;
         }
-        .right{
+
+        .right {
             align-self: flex-end;
         }
-        .form-button{
-            margin-top:48px;
+
+        .form-button {
+            margin-top: 48px;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -224,6 +239,17 @@
             text-align: center;
             letter-spacing: -0.428571px;
             color: #FFFFFF;
+        }
+
+        span {
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.428571px;
+
+            color: #152232;
         }
 
         @media (min-width: 1800px) {
@@ -246,6 +272,11 @@
         /*}*/
 
         @media (max-width: 768px) {
+            .registration-form {
+                position: relative;
+                width: 100%;
+            }
+
             .container {
                 grid-template-columns: 1fr;
                 width: 100%;
@@ -261,6 +292,45 @@
                 height: 100%;
                 grid-row: 2/3;
                 grid-column: 1/3;
+            }
+
+            .logo {
+                left: 50%;
+            }
+
+            .logo-title {
+                font-size: 20px;
+            }
+
+            .form-title {
+                font-size: 24px;
+            }
+
+            .form-label {
+                display: none;
+            }
+
+            .form-subtitle, .form-label span {
+                font-size: 16px;
+                display: block;
+            }
+
+            .form-input {
+                margin-bottom: 24px;
+                height: 58px;
+            }
+
+            .right {
+                align-self: flex-start;
+                font-size: 16px;
+            }
+
+            p.form-subtitle.red.right {
+                margin-top: -15px;
+            }
+
+            .form-button {
+                margin-top: 30px;
             }
         }
     </style>
@@ -280,7 +350,7 @@
             <p class="form-subtitle">How does it work? <span class="red">Discover PolizzaCerta</span></p>
 
             <div class="form-div">
-                <label class="form-label" for="company">Choose the Insurance Company</label>
+                <span class="form-label">Choose the Insurance Company</span>
                 <input class="form-input" type="text" id="company" list="company_list" placeholder="Insurance Company">
                 <datalist class="datalist" id="company_list">
                     <option value="Insurance Company1">Insurance Company 1</option>
@@ -288,10 +358,11 @@
                     <option value="Insurance Company3">Insurance Company 3</option>
 
                 </datalist>
-                <label class="form-label" for="policy">The policy number <span class="blue">Where I can find a Policy Number?</span></label>
-                <input class="form-input" type="text" id="company"  placeholder="Policy number">
-                <label class="form-label" for="tax">Tax identification Number</label>
-                <input class="form-input eye-off" type="text" id="tax"  placeholder="Tax identification number">
+                <p><span class="form-label">The policy number</span> <span class="blue">Where I can find a Policy Number?</span>
+                </p>
+                <input class="form-input" type="text" id="policy" placeholder="Policy number">
+                <span class="form-label">Tax identification Number</span>
+                <input class="form-input eye-off" type="text" id="tax" placeholder="Tax identification number">
                 <p class="form-subtitle red right">Is my data safe?</p>
                 <button class="form-button">Check Policy</button>
             </div>
