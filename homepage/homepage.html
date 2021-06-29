@@ -14,11 +14,13 @@
             margin: 0;
             padding: 0;
         }
+
         html {
             font-family: Circular Std;
             font-style: normal;
             font-size: 20px;
         }
+
         .container {
             background: #fff;
             width: 100vw;
@@ -180,6 +182,45 @@
             color: #D8D6DE;
         }
 
+        select.form-input {
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.428571px;
+            color: #D8D6DE;
+        }
+
+        select option {
+            color: #6E6B7B;
+        }
+
+        .select {
+            position: relative;
+            min-width: 100%;
+
+        }
+
+        .select select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .select:after {
+            content: "";
+            display: block;
+            border-style: solid;
+            border-width: 13px 9px 0 9px;
+            border-color: #000 transparent transparent transparent;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            z-index: 1;
+            margin-top: -16px;
+        }
 
         .form-input {
             margin-bottom: 24px;
@@ -196,7 +237,7 @@
             font-size: 20px;
             line-height: 25px;
             letter-spacing: -0.428571px;
-            color: #6E6B7B;;
+            color: #6E6B7B;
         }
 
         .eye-off::after {
@@ -208,8 +249,9 @@
             margin-bottom: 14px;
         }
 
-        input[name='company_list'] {
-            width: 500px;
+        input[name='company'] {
+            width: 100%;
+            min-width: 400px;
         }
 
         .red {
@@ -264,16 +306,19 @@
 
             color: #152232;
         }
+
         p.form-subtitle.red.right {
             margin-top: -18px;
         }
-    @media(min-width:1922px){
-        .registration-form {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+
+        @media (min-width: 1922px) {
+            .registration-form {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
-    }
+
         @media (min-width: 1800px) {
             .bg-image {
                 margin-top: -70px;
@@ -361,7 +406,7 @@
 
             .form-input {
                 margin-bottom: 24px;
-                height: 58px;
+                
             }
 
             .right {
@@ -405,13 +450,22 @@
 
             <div class="form-div">
                 <span class="form-label">Choose the Insurance Company</span>
-                <input class="form-input" type="text" id="company" list="company_list" placeholder="Insurance Company">
-                <datalist class="datalist" id="company_list">
-                    <option value="Insurance Company1">Insurance Company 1</option>
-                    <option value="Insurance Company2">Insurance Company 2</option>
-                    <option value="Insurance Company3">Insurance Company 3</option>
-
-                </datalist>
+                <!--                <input class="form-input" type="text" id="company" name="company" list="company_list"-->
+                <!--                       placeholder="Insurance Company">-->
+                <!--                <datalist class="datalist" id="company_list">-->
+                <!--                    <option value="Insurance Company1">Insurance Company 1</option>-->
+                <!--                    <option value="Insurance Company2">Insurance Company 2</option>-->
+                <!--                    <option value="Insurance Company3">Insurance Company 3</option>-->
+                <!--                </datalist>-->
+                <p class="select">
+                    <select class="form-input" name="select2">
+                        <!--                    <option selected="selected">Insurance Company</option>-->
+                        <option>Insurance Company</option>
+                        <option>Insurance Company 1</option>
+                        <option>Insurance Company 2</option>
+                        <option>Insurance Company 3</option>
+                        <option>Insurance Company 4</option>
+                    </select></p>
                 <p><span class="form-label">The policy number</span> <span class="blue">Where I can find a Policy Number?</span>
                 </p>
                 <input class="form-input" type="text" id="policy" placeholder="Policy number">
