@@ -43,7 +43,7 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .logo-title {
@@ -279,9 +279,13 @@
         /*}*/
 
         @media (max-width: 768px) {
+            .logo img{
+                width: 25px;
+            }
             .registration-form {
                 position: relative;
                 width: 100%;
+                padding: 15px;
             }
 
             .container {
@@ -338,6 +342,14 @@
 
             .form-button {
                 margin-top: 30px;
+            }
+        }
+        @media(max-width:388px){
+            .logo{
+                top:45px;
+            }
+            .logo-title {
+                font-size: 14px;
             }
         }
     </style>
