@@ -220,8 +220,8 @@
         }
 
         .form-button {
-            cursor:pointer;
-            border:1px solid #91D690;
+            cursor: pointer;
+            border: 1px solid #91D690;
             margin-top: 48px;
             display: flex;
             flex-direction: row;
@@ -243,7 +243,8 @@
             color: #FFFFFF;
             transition: background .3s linear;
         }
-        .form-button:hover{
+
+        .form-button:hover {
             background: #fff;
             color: #91D690;
         }
@@ -265,12 +266,21 @@
             }
         }
 
-        /*@media (max-width: 1200px) {*/
-        /*    .registration-form {*/
-        /*        width: 100%;*/
-        /*    }*/
+        @media (max-width: 1200px) {
+            .registration-form {
+                width: 120%;
+                margin-left: -21%;
+            }
 
-        /*}*/
+            .form-button {
+                margin-top: 0;
+            }
+
+            .logo {
+                left: 5%;
+            }
+
+        }
 
         @media (max-width: 1024px) {
             .registration-form {
@@ -279,14 +289,16 @@
             }
 
             .logo {
-                left:1.6%;
+                left: 1.6%;
             }
+
         }
 
         @media (max-width: 768px) {
-            .logo img{
+            .logo img {
                 width: 25px;
             }
+
             .registration-form {
                 position: relative;
                 width: 100%;
@@ -350,10 +362,12 @@
                 margin-top: 30px;
             }
         }
-        @media(max-width:388px){
-            .logo{
-                top:3%;
+
+        @media (max-width: 388px) {
+            .logo {
+                top: 3%;
             }
+
             .logo-title {
                 font-size: 14px;
             }
