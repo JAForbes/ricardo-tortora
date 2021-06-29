@@ -259,15 +259,22 @@
 
             color: #152232;
         }
-
+    @media(min-width:1922px){
+        .registration-form {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
         @media (min-width: 1800px) {
             .bg-image {
                 margin-top: -70px;
             }
         }
 
-        @media (max-height: 768px) {
+        @media (max-width: 1200px) {
             .registration-form {
+                padding: 26px;
                 width: 120%;
                 margin-left: -21%;
             }
