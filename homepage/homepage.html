@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        @import url("fonts/circular/stylesheet.css");
         *, *::after, *::before {
             box-sizing: border-box;
             margin: 0;
@@ -21,25 +22,52 @@
             grid-template-columns: 1fr 1fr;
         }
 
+
         .bg-image {
-            /*object-fit: cover;*/
-            /*min-width: 100vw;*/
-            /*min-height: 100vh;*/
+            z-index: 0;
+            position: relative;
+
             object-fit: cover;
             width: 100%;
             height: 100%;
         }
 
+        .logo {
+            z-index: 1;
+            position: absolute;
+            left: 15.62%;
+            right: 81.15%;
+            top: 8.89%;
+            bottom: 85.65%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+
+        .logo-title {
+            margin-left: 16px;
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 38px;
+            letter-spacing: -0.428571px;
+            color: #FFFFFF;
+        }
+
         .registration-form {
-            width: 300px;
-            height: 500px;
-            background: #fff;
-            border-radius: 10px;
+            z-index: 2;
+            width: 65%;
+            height: 80%;
+            max-height: 100%;
+            background: #FFFFFF;
+            border-radius: 16px;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 56px 48px;
         }
 
         .block-image {
@@ -48,40 +76,187 @@
         }
 
         .block-form {
+            height: 100vh;
             grid-row: 1/2;
             grid-column: 2/3;
-            border: 1px solid red;
-            flex-basis: 50%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
-@media(max-width:768px){
-    .container{
-        grid-template-columns: 1fr;
-        width: 100%;
-        height: 100%;
-    }
-    .bg-image{
-        grid-row:1/2;
-        grid-column: 1/3;
-    }
-    .block-form{
-        grid-row:2/3;
-        grid-column: 1/3;
-    }
-}
+        .form-div {
+            width: 100%;
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .form-title {
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 51px;
+            letter-spacing: -0.428571px;
+            color: #152232;
+        }
+
+        .form-subtitle {
+            margin-top: 16px;
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: -0.428571px;
+            color: #949CA5;
+        }
+
+        .form-label {
+            margin: 24px 0 16px 0;
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.428571px;
+            color: #152232;
+        }
+
+        ::-webkit-input-placeholder { /* Chrome */
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.428571px;
+            color: #D8D6DE;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.428571px;
+            color: #D8D6DE;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.428571px;
+            color: #D8D6DE;
+        }
+        :-moz-placeholder { /* Firefox 4 - 18 */
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.428571px;
+            color: #D8D6DE;
+        }
+
+
+        .form-input {
+            width: 100%;
+            height: 80px;
+            outline: none;
+            padding: 28px 13px;
+            background: #FFFFFF;
+            border: 1px solid #152232;
+            border-radius: 8px;
+            font-family: Circular Std;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.428571px;
+            color: #6E6B7B;;
+        }
+
+        input[name='company_list'] {
+            width: 500px;
+        }
+
+        .red {
+            color: #E6967A;
+        }
+        .blue{
+            color: #4881EF;
+        }
+
+        @media (min-width: 1800px) {
+            .bg-image {
+                margin-top: -70px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .registration-form {
+                width: 80%;
+            }
+
+        }
+
+        @media (max-width: 1024px) {
+            .registration-form {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                width: 100%;
+                height: 100%;
+            }
+
+            .bg-image {
+                grid-row: 1/2;
+                grid-column: 1/3;
+            }
+
+            .block-form {
+                height: 100%;
+                grid-row: 2/3;
+                grid-column: 1/3;
+            }
+        }
     </style>
 </head>
 <body>
 <section class="container">
     <div class="block-image">
-          <img class="bg-image" src="images/bg1.jpg" alt="">
+        <img class="bg-image" src="images/bg1.jpg" alt="">
+        <div class="logo">
+            <img src="images/logo.png">
+            <p class="logo-title">POLIZZACERTA </p>
+        </div>
     </div>
     <div class="block-form">
         <div class="registration-form">
-            menu
+            <p class="form-title">Verify your policy</p>
+            <p class="form-subtitle">How does it work? <span class="red">Discover PolizzaCerta</span></p>
+
+            <div class="form-div">
+                <label class="form-label" for="company">Choose the Insurance Company</label>
+                <input class="form-input" type="text" id="company" list="company_list" placeholder="Insurance Company">
+                <datalist class="datalist" id="company_list">
+                    <option value="Insurance Company1">Insurance Company 1</option>
+                    <option value="Insurance Company2">Insurance Company 2</option>
+                    <option value="Insurance Company3">Insurance Company 3</option>
+
+                </datalist>
+                <label class="form-label" for="policy">The policy number <span class="blue">Where I can find a Policy Number?</span></label>
+                <input class="form-input" type="text" id="company"  placeholder="Policy number">
+            </div>
         </div>
     </div>
 </section>
