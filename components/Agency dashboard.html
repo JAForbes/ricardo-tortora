@@ -66,6 +66,7 @@
                 <p><img class="ml-4 rounded-full bg-purple-600 bg-opacity-25" src="images/avatar.png" alt="avatar"></p>
             </div>
         </div>
+
         <div class="w-full flex justify-content-between mb-8">
             <div class="w-1/2 flex justify-start  items-center">
                 <p><img class="rounded-full bg-purple-600 bg-opacity-25" src="images/company-logo.png"
@@ -85,13 +86,63 @@
                 </div>
             </div>
         </div>
-        <div class="w-full flex flex-nowrap justify-content-between mb-6">
-            <div class="w-5/12 new-box-shadow rounded-lg mr-6   p-3 xl:p-5 2xl:p-10 "> form1 </div>
-            <div class="w-full new-box-shadow rounded-lg   p-3 xl:p-5 2xl:p-10 "> form2 </div>
-        </div>
 
         <div class="w-full flex flex-nowrap justify-content-between mb-6">
-            <div class="new-box-shadow rounded-lg   p-3 xl:p-5 2xl:p-10 w-full"> form3 </div>
+            <div class="w-5/12 new-box-shadow rounded-lg mr-6   p-3 xl:p-5 2xl:p-10 ">
+                <p class="mb-5">
+                    <label class="text-base font-medium " for="phone">Phone for assistance</label>
+                    <input class="p-2.5 text-base font-normal border w-full rounded-lg placeholder-gray-600 placeholder-opacity-75"
+                           type="text" name="phone" id="phone" placeholder="+7 (902) 750-98-00">
+                </p>
+                <p class="mb-5">
+                    <label class="text-base font-medium " for="adress">Adress</label>
+                    <input class="p-2.5 text-base font-normal border w-full rounded-lg placeholder-gray-300" type="text"
+                           name="adress" id="adress" placeholder="1st Avenue 27, 3874" disabled>
+                </p>
+                <p class="">
+                    <label class="text-base font-medium " for="number">Insurance Identification Number</label>
+                    <input class="p-2.5 text-base font-normal border w-full rounded-lg placeholder-gray-300" type="text"
+                           name="number" id="number" placeholder="837483358" disabled>
+                </p>
+            </div>
+            <div class="w-7/12 new-box-shadow rounded-lg   p-3 xl:p-5 2xl:p-10 ">
+                <p class="text-xl mb-5 font-bold w-full text-left">Statistics of the certified contracts</p>
+                <p> block </p>
+            </div>
+        </div>
+
+        <div class="w-full  mb-6">
+            <div class="new-box-shadow rounded-lg   p-3 xl:p-5 2xl:p-10 w-full flex flex-nowrap flex-col">
+                <p class="text-xl mb-5 font-bold w-full text-left">Responsible</p>
+                <div class="flex justify-start items-center w-full">
+                    <div class="mb-5 w-5/12 mr-4 pr-3 xl:pr-5 2xl:pr-10" >
+                        <p class="mb-5">
+                            <label class="text-base font-medium " for="name">Name</label>
+                            <input class="p-2.5 text-base font-normal border w-full rounded-lg placeholder-gray-600 placeholder-opacity-75"
+                                   type="text" name="name" id="name" placeholder="Jax Teller">
+                        </p>
+                        <p class="mb-5">
+                            <label class="text-base font-medium " for="position">Position</label>
+                            <input class="p-2.5 text-base font-normal border w-full rounded-lg placeholder-gray-600 placeholder-opacity-75"
+                                   type="text" name="position" id="position" placeholder="Director" >
+                        </p>
+                    </div>
+                    <div class="mb-5 w-5/12">
+                        <p class="mb-5">
+                            <label class="text-base font-medium " for="user-phone">Phone</label>
+                            <input class="p-2.5 text-base font-normal border w-full rounded-lg placeholder-gray-600 placeholder-opacity-75"
+                                   type="text" name="user-phone" id="user-phone" placeholder="+7 (902) 750-98-00">
+                        </p>
+                        <p class="mb-5">
+                            <label class="text-base font-medium " for="email">Email</label>
+                            <input class="p-2.5 text-base font-normal border w-full rounded-lg placeholder-gray-600 placeholder-opacity-75"
+                                   type="email" name="email" id="email" placeholder="1@1.com" >
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
 
     </div>
