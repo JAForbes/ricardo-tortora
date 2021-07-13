@@ -14,52 +14,60 @@
 </head>
 <body>
 
-<div class="flex flex-row flex-wrap md:flex-nowrap justify-start items-start w-full min-h-screen">
-    <div class="w-full md:w-96 p-10 new-bg-purple-100 self-stretch fixed min-h-screen">
-        <div class="flex flex-row flex-nowrap items-center justify-start  mb-10">
-            <img class="w-12 mr-2.5" src="images/logo.png">
-            <p class="text-2xl tracking-wide text-black">POLIZZACERTA </p>
-        </div>
-        <div>
-            <ul class="new-leftMenu-color">
-                <li class="flex flex-row flex-nowrap justify-start items-center mb-2 py-3 pl-4 rounded-xl new-active">
-                    <img class="new-leftMenu-icon" src="images/dashboard-icon.png" alt="icon"><a href="#">Dashboard</a>
-                </li>
-                <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl"><img
-                        class="new-leftMenu-icon" src="images/tokens-icon.png" alt="icon"><a href="#">Tokens </a></li>
-                <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl"><img
-                        class="new-leftMenu-icon" src="images/contracts-icon.png" alt="icon"><a href="#">Contracts</a>
-                </li>
-                <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3  pl-4 rounded-xl new-inner-block"><img
-                        class="new-leftMenu-icon" src="images/download-icon.png" alt="icon">
-                    <a class="new-list" href="#">Upload Contract</a>
-                    <img
-                            class="new-leftMenu-icon new-after" src="images/arrow-right-menu.png" alt="icon">
-                    <ul class="new-leftMenu-color new-inner-menu">
-                        <li class="flex flex-row flex-nowrap justify-start items-center mb-2 py-3 pl-4 rounded-xl new-active">
-                            <img class="new-leftMenu-icon" src="images/dashboard-icon.png" alt="icon"><a href="#">Dashboard</a>
-                        </li>
-                        <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl"><img
-                                class="new-leftMenu-icon" src="images/tokens-icon.png" alt="icon"><a
-                                href="#">Tokens </a></li>
-                    </ul>
+<div class="flex flex-row flex-wrap md:flex-nowrap justify-start items-start w-full min-h-full">
+    <div class="w-full md:w-96 p-10 new-bg-purple-100 self-stretch  min-h-screen">
+        <div class="fixed">
+            <div class="flex flex-row flex-nowrap items-center justify-start  mb-10">
+                <img class="w-12 mr-2.5" src="images/logo.png">
+                <p class="text-2xl tracking-wide text-black">POLIZZACERTA </p>
+            </div>
+            <div>
+                <ul class="new-leftMenu-color">
+                    <li class="flex flex-row flex-nowrap justify-start items-center mb-2 py-3 pl-4 rounded-xl new-active">
+                        <img class="new-leftMenu-icon" src="images/dashboard-icon.png" alt="icon"><a
+                            href="#">Dashboard</a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl"><img
+                            class="new-leftMenu-icon" src="images/tokens-icon.png" alt="icon"><a href="#">Tokens </a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl"><img
+                            class="new-leftMenu-icon" src="images/contracts-icon.png" alt="icon"><a
+                            href="#">Contracts</a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3  pl-4 rounded-xl new-inner-block">
+                        <img
+                                class="new-leftMenu-icon" src="images/download-icon.png" alt="icon">
+                        <a class="new-list" href="#">Upload Contract</a>
+                        <img
+                                class="new-leftMenu-icon new-after" src="images/arrow-right-menu.png" alt="icon">
+                        <ul class="new-leftMenu-color new-inner-menu">
+                            <li class="flex flex-row flex-nowrap justify-start items-center mb-2 py-3 pl-4 rounded-xl ">
+                                <img class="new-leftMenu-icon" src="images/manual-icon.png" alt="icon"><a href="#">Manual
+                                Upload</a>
+                            </li>
+                            <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl new-active">
+                                <img
+                                        class="new-leftMenu-icon" src="images/auto-icon.png" alt="icon"><a
+                                    href="#">Automatic Upload (API) </a></li>
+                        </ul>
 
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="w-full md:p-10">
-        content
+    <div class="w-full md:p-10" style="width: 100%; border: 1px solid red">
+        content xdbvxdfb bdf dgf fngfnfng
     </div>
 </div>
 <script>
-    document.querySelector(".new-inner-block").addEventListener("mouseover",()=> {
+    document.querySelector(".new-inner-block").addEventListener("mouseover", () => {
         document.querySelector(".new-inner-menu").classList.add("new-active-block")
-        document.querySelector(".new-after").src= `images/arrow-bottom-menu.png`
+        document.querySelector(".new-after").src = `images/arrow-bottom-menu.png`
     })
-    document.querySelector(".new-inner-block").addEventListener("mouseout",()=> {
+    document.querySelector(".new-inner-block").addEventListener("mouseout", () => {
         document.querySelector(".new-inner-menu").classList.remove("new-active-block")
-        document.querySelector(".new-after").src= `images/arrow-right-menu.png`
+        document.querySelector(".new-after").src = `images/arrow-right-menu.png`
     })
 
 </script>
