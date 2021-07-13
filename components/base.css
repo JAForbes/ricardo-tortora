@@ -69,3 +69,7 @@ html {
 .new-active-block {
     display: block;
 }
+.new-box-shadow{
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+
+}
