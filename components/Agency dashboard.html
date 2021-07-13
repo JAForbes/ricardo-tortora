@@ -14,9 +14,9 @@
 </head>
 <body>
 
-<div class="flex flex-row flex-wrap md:flex-nowrap justify-start items-start w-full min-h-full">
+<div class="flex flex-row flex-wrap md:flex-nowrap justify-start items-start w-full min-h-full box-border">
     <!-- LEFT MENU START-->
-    <div class="w-full md:w-96 p-10 new-bg-purple-100 self-stretch  min-h-screen">
+    <div class="w-full md:w-96 p-10 new-bg-purple-100 self-stretch  min-h-screen box-border">
         <div class="fixed">
             <div class="flex flex-row flex-nowrap items-center justify-start  mb-10">
                 <img class="w-12 mr-2.5" src="images/logo.png">
@@ -46,7 +46,7 @@
                                 <img class="new-leftMenu-icon" src="images/manual-icon.png" alt="icon"><a href="#">Manual
                                 Upload</a>
                             </li>
-                            <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl new-active">
+                            <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl">
                                 <img
                                         class="new-leftMenu-icon" src="images/auto-icon.png" alt="icon"><a
                                     href="#">Automatic Upload (API) </a></li>
@@ -58,20 +58,37 @@
         </div>
     </div>
     <!-- LEFT MENU END-->
-    <div class="w-full md:p-10" style="width: 100%; border: 1px solid red">
-        content xdbvxdfb bdf dgf fngfnfng
+    <div class="w-full md:p-10 box-border">
+        <div class="w-full rounded-xl new-bg-purple-100 h-16 shadow-md flex justify-end py-4 px-8 mb-8">
+            <div class="flex justify-between  items-center">
+                <p class="flex flex-col justify-between items-end "><span
+                        class="text-base text-right">John Doe</span><span class="text-disable text-xs">Admin</span></p>
+                <p><img class="ml-4 rounded-full bg-purple-600 bg-opacity-25" src="images/avatar.png" alt="avatar"></p>
+            </div>
+        </div>
+        <div class="w-full rounded-xl  flex justify-content-between mb-8" style="border: 1px solid red;">
+
+            <div class="w-1/2 flex justify-start  items-center">
+                <p><img class="ml-4 rounded-full bg-purple-600 bg-opacity-25" src="images/company-logo.png"
+                        alt="company logo"></p>
+                <p class="flex flex-col justify-start items-start ">
+                    <span class="text-3xl text-left font-bold">Imkliva Agency</span>
+                    <span class="text-lg text-left font-normal">17364398438934039409 (Tax ID)</span>
+                </p>
+            </div>
+            <div class="w-1/2 flex flex-col justify-center  items-end">
+                <div class="text-3xl text-right font-bold">Associated with</div>
+
+                <div class="flex flex-row justify-between items-start ">
+                    <img class="ml-4 rounded-full bg-purple-600 bg-opacity-25" src="images/insh-company-2.png"
+                            alt="company logo">
+                    <p class="text-xs text-right font-normal">PromTransInvest</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
-<script>
-    document.querySelector(".new-inner-block").addEventListener("mouseover", () => {
-        document.querySelector(".new-inner-menu").classList.add("new-active-block")
-        document.querySelector(".new-after").src = `images/arrow-bottom-menu.png`
-    })
-    document.querySelector(".new-inner-block").addEventListener("mouseout", () => {
-        document.querySelector(".new-inner-menu").classList.remove("new-active-block")
-        document.querySelector(".new-after").src = `images/arrow-right-menu.png`
-    })
-
-</script>
+<script src="left-menu.js"></script>
 </body>
 </html>

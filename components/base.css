@@ -10,8 +10,11 @@ html {
     font-family: Circular Std;
     font-style: normal;
     font-size: 20px;
+    color: #5E5873;
 }
-
+.text-disable{
+    color: #B9B9C3;
+}
 .new-bg-purple-100 {
     background: #EDEBFF;
 }
@@ -46,7 +49,8 @@ html {
 .new-list {
     position: relative;
 }
-.new-inner-menu{
+
+.new-inner-menu {
     display: none;
     width: 100%;
     position: absolute;
@@ -54,6 +58,7 @@ html {
     left: 0;
     transition: 4.3s linear;
 }
+
 .new-after {
     position: absolute;
     right: 40px;
@@ -61,6 +66,6 @@ html {
     width: 22px;
 }
 
-.new-active-block{
+.new-active-block {
     display: block;
 }
