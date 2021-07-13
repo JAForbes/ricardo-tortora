@@ -1,0 +1,66 @@
+@import url("fonts/circular/stylesheet.css");
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Circular Std;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.new-bg-purple-100 {
+    background: #EDEBFF;
+}
+
+.new-leftMenu-icon {
+    width: 30px;
+    margin-right: 1rem;
+
+}
+
+.new-leftMenu-color li {
+    position: relative;
+}
+
+.new-leftMenu-color li > a {
+    display: block;
+    height: 27px;
+    left: 65px;
+    position: absolute;
+    color: #5E5873;
+    text-decoration: none;
+}
+
+.new-leftMenu-color li > a:hover {
+    border-bottom: 2px solid #5E5873;
+}
+
+.new-active {
+    background: #fff;
+}
+
+.new-list {
+    position: relative;
+}
+.new-inner-menu{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    transition: 4.3s linear;
+}
+.new-after {
+    position: absolute;
+    right: 109px;
+    top: 19px;
+    width: 22px;
+}
+
+.new-active-block{
+    display: block;
+}
