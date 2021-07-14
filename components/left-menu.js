@@ -1,10 +1,10 @@
 document.querySelector(".new-inner-block").addEventListener("mouseover", () => {
     document.querySelector(".new-inner-menu").classList.add("new-active-block")
-    document.querySelector(".new-after").src = `images/arrow-bottom-menu.png`
+    document.querySelector(".new-after").src = `../images/arrow-bottom-menu.png`
 })
 document.querySelector(".new-inner-block").addEventListener("mouseout", () => {
     document.querySelector(".new-inner-menu").classList.remove("new-active-block")
-    document.querySelector(".new-after").src = `images/arrow-right-menu.png`
+    document.querySelector(".new-after").src = `../images/arrow-right-menu.png`
 })
 
 const listLinks = document.querySelectorAll(".new-leftMenu-color>li>a")
