@@ -168,7 +168,7 @@
 
             </div>
             <div class="w-4/12 flex flex-col self-start">
-                <div class="w-full new-box-shadow rounded-lg   p-4 self-start">
+                <div class="w-full new-box-shadow rounded-lg   p-4 self-start relative">
                     <p class="text-lg mb-5 font-bold w-full text-left ">Buy tokens now</p>
                     <p class="mb-3"><input
                             class="new-bg-purple-100 hover:bg-purple-200 focus:bg-purple-300 p-2.5 text-base font-sm border w-full rounded-lg placeholder-gray-600 placeholder-opacity-75 focus:outline-none  focus:border-indigo-300 focus:border"
@@ -187,7 +187,16 @@
                             Buy
                         </button>
                     </p>
+
+                    <!-- alert block start  -->
+                    <div class="hidden absolute inset-0 w-full new-box-shadow rounded-lg   p-4 self-start bg-indigo-600 bg-opacity-50 text-base text-white h-full flex flex-col text-center justify-center items-center">
+                        <p class="w-3/4  pt-12">You’re not allowed to purchase Tokens.</p>
+                           <p class="w-3/4 pt-4 pb-12"> Please, contact your associated Agency, if you need to replenish your tokens.</p>
+                    </div>
+                    <!-- alert block end  -->
+
                 </div>
+
                 <div class="my-5 text-base pl-2">The number of uploaded tokens in the time interval</div>
                 <p class="mb-3 p-2.5 text-sm text-indigo-600 font-normal border w-full rounded-lg ">13 637 tokens</p>
 
