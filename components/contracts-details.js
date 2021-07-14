@@ -1,51 +1,44 @@
-// const elements = document.querySelectorAll(".details")
-// for (let i = 0; i < elements.length; i++) {
-//     elements[i].querySelector(".text-indigo-600.font-normal.cursor-pointer.details-block").addEventListener("click", (event) => {
-//         console.log("открываем")
-//         event.target.innerHTML = `X-close`
-//         var blockDetails = event.target.parentNode.parentNode.querySelector(".grid.grid-cols-1.w-full")
-//         if (blockDetails) {
-//             blockDetails.classList.remove("hidden")
-//             var close = event.target
-//             close.addEventListener("click", (event) => {
-//                 console.log("закрываем")
-//                     event.target.innerHTML = `details`
-//                     var blockDetails2 = event.target.parentNode.parentNode.querySelector(".grid.grid-cols-1.w-full")
-//                     if (blockDetails2) {
-//                         blockDetails2.classList.add("hidden")
-//                     }
-//                 })
-//         }
-//     })
-// }
-document.addEventListener("DOMContentLoaded",open)
-function open() {
-    const elements = document.querySelectorAll(".details")
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].querySelector(".text-indigo-600.font-normal.cursor-pointer").addEventListener("click", (event) => {
+var elements = document.querySelectorAll(".details")
+open(elements)
 
-            event.target.innerHTML = `X-close`
-            var blockDetails = event.target.parentNode.parentNode.querySelector(".hidden.grid.grid-cols-1.w-full")
-            if (blockDetails) {
-                console.log("OPEn BLOCK")
-                blockDetails.classList.remove("hidden")
-                close()
-            }
-        })
+function open(elements) {
+    if (typeof elements !== 'undefined') {
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].querySelector(".text-indigo-600.font-normal.cursor-pointer.block-close").addEventListener("click", (event) => {
+                event.target.parentNode.parentNode.classList.add("open-details-block")
+                event.target.classList.remove("block-close")
+                event.target.classList.add("block-open")
+                event.target.innerHTML = `X-close`
+                const blockDetails = event.target.parentNode.parentNode.querySelector(".hidden.grid.grid-cols-1.w-full")
+                if (blockDetails) {
+                    blockDetails.classList.remove("hidden")
+                    //console.log("OPEN BLOCK")
+                    closeEl = document.querySelectorAll(".open-details-block")
+                    close(closeEl)
+
+                }
+            })
+        }
     }
 }
-function close() {
-    const closeEl = document.querySelectorAll(".details")
-    for (let z = 0; z < closeEl.length; z++) {
-        closeEl[z].querySelector(".text-indigo-600.font-normal.cursor-pointer").addEventListener("click", (event) => {
 
-            event.target.innerHTML = `details`
-            var blockDetails2 = event.target.parentNode.parentNode.querySelector(".grid.grid-cols-1.w-full")
-            if (blockDetails2) {
-                console.log("CLOSE BLOCK")
-                blockDetails2.classList.add("hidden")
-                open()
-            }
-        })
+function close(closeEl) {
+    if (typeof closeEl !== 'undefined') {
+        for (let z = 0; z < closeEl.length; z++) {
+            closeEl[z].querySelector(".text-indigo-600.font-normal.cursor-pointer.block-open").addEventListener("click", (event) => {
+                event.target.parentNode.parentNode.classList.remove("open-details-block")
+                event.target.classList.remove("block-open")
+                event.target.classList.add("block-close")
+                event.target.innerHTML = `details`
+                const blockDetails2 = event.target.parentNode.parentNode.querySelector(".grid.grid-cols-1.w-full")
+                if (typeof blockDetails2 !== 'undefined') {
+                    blockDetails2.classList.add("hidden")
+                    //console.log("CLOSE BLOCK" )
+                    elements = document.querySelectorAll(".details")
+                    open(elements)
+
+                }
+            })
+        }
     }
 }
