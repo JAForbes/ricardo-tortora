@@ -107,7 +107,7 @@
                             <p class="font-normal">21 Feb 2018</p>
                             <p class="font-normal">20 Feb 2020</p>
                             <p class="font-normal">UK</p>
-                            <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                            <p class="text-indigo-600 font-normal cursor-pointer close">X-close</p>
                         </div>
                     </div>
                     <!-- details block end-->
@@ -140,7 +140,7 @@
                             <p class="font-normal">21 Feb 2018</p>
                             <p class="font-normal">20 Feb 2020</p>
                             <p class="font-normal">UK</p>
-                            <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                            <p class="text-indigo-600 font-normal cursor-pointer close">X-close</p>
                         </div>
                     </div>
                     <!-- details block end-->
@@ -161,8 +161,18 @@
         elements[i].querySelector(".text-indigo-600.font-normal.cursor-pointer").addEventListener("click", (event) => {
             let blockDetails = event.target.parentNode.parentNode.querySelector(".hidden.grid.grid-cols-1.w-full")
             blockDetails.classList.remove("hidden")
+            close()
         })
     }
+function close() {
+    const closeEl = document.querySelectorAll(".details")
+    for (let z = 0; z < elements.length; z++) {
+        closeEl[z].querySelector(".text-indigo-600.font-normal.cursor-pointer.close").addEventListener("click", (event) => {
+            let blockDetails2 = event.target.parentNode.parentNode.parentNode.querySelector(".grid.grid-cols-1.w-full")
+            blockDetails2.classList.add("hidden")
+        })
+    }
+}
 </script>
 </body>
 </html>
