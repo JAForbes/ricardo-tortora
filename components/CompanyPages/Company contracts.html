@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../tailwind.css" rel="stylesheet">
+    <link href="../base.css" rel="stylesheet">
+    <style>
+
+    </style>
+    <title>Company contracts</title>
+</head>
+<body>
+
+<div class="flex flex-row flex-wrap md:flex-nowrap justify-start items-start w-full min-h-full box-border">
+    <!-- LEFT MENU START-->
+    <div class="w-full md:w-96 p-3 xl:p-5 2xl:p-10 new-bg-purple-100 self-stretch  min-h-screen box-border">
+        <div class="fixed w-60">
+            <div class="flex flex-row flex-nowrap items-center justify-start  mb-10">
+                <img class="w-12 mr-2.5" src="../images/logo.png">
+                <p class="text-lg 2xl:text-2xl tracking-wide text-black">POLIZZACERTA </p>
+            </div>
+            <div>
+                <ul class="new-leftMenu-color">
+                    <li class="flex flex-row flex-nowrap justify-start items-center mb-2 py-3 pl-4 rounded-xl">
+                        <img class="new-leftMenu-icon" src="../images/dashboard-icon.png" alt="icon"><a
+                            href="#">Dashboard</a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl  new-active">
+                        <img
+                                class="new-leftMenu-icon" src="../images/tokens-icon.png" alt="icon"><a
+                            href="#">Tokens </a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl"><img
+                            class="new-leftMenu-icon" src="../images/contracts-icon.png" alt="icon"><a
+                            href="#">Contracts</a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3  pl-4 rounded-xl new-inner-block">
+                        <img
+                                class="new-leftMenu-icon" src="../images/download-icon.png" alt="icon">
+                        <a class="new-list" href="#">Upload Contract</a>
+                        <img
+                                class="new-leftMenu-icon new-after" src="../images/arrow-right-menu.png" alt="icon">
+                        <ul class="new-leftMenu-color new-inner-menu">
+                            <li class="flex flex-row flex-nowrap justify-start items-center mb-2 py-3 pl-4 rounded-xl ">
+                                <img class="new-leftMenu-icon" src="../images/manual-icon.png" alt="icon"><a href="#">Manual
+                                Upload</a>
+                            </li>
+                            <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl">
+                                <img
+                                        class="new-leftMenu-icon" src="../images/auto-icon.png" alt="icon"><a
+                                    href="#">Automatic Upload (API) </a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- LEFT MENU END-->
+    <div class="w-full  p-3 xl:p-5 2xl:p-10 box-border">
+        <div class="w-full rounded-xl new-bg-purple-100 h-16 shadow-md flex justify-end py-4 px-8 mb-8">
+            <div class="flex justify-between  items-center">
+                <p class="flex flex-col justify-between items-end "><span
+                        class="text-base text-right">John Doe</span><span class="text-disable text-xs">Admin</span></p>
+                <p><img class="ml-4 rounded-full bg-purple-600 bg-opacity-25" src="../images/avatar.png" alt="avatar">
+                </p>
+            </div>
+        </div>
+
+
+        <div class="w-full flex flex-nowrap justify-content-between mb-6">
+            <div class="w-full new-box-shadow rounded-lg mr-6   p-3 xl:p-5 2xl:p-10 ">
+                <div class=" grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-3 bg-gray-200 text-xs 2xl:text-sm tracking-wide font-bold uppercase rounded">
+                    <p class="col-start-1 col-end-3">Policy Number</p>
+                    <p>IP address</p>
+                    <p>Date</p>
+                    <p>Time</p>
+                    <p>Details</p>
+                </div>
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                    alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+
+
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+                <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                    <p class="font-bold col-start-1 col-end-3">1837000</p>
+                    <p class="font-normal">66.249.64.122</p>
+                    <p class="font-normal">21 Feb 2020</p>
+                    <p class="font-normal">1:05 pm</p>
+                    <p class="text-indigo-600 font-normal cursor-pointer">details</p>
+                </div>
+                <!-- details block start-->
+                <div class="hidden grid grid-cols-1 w-full">
+                    <div class="grid grid-cols-6 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal uppercase rounded-xs">
+                        <p class="col-start-1 col-end-3">Uploaded by</p>
+                        <p>Start date</p>
+                        <p>End Date</p>
+                        <p>Country</p>
+                        <p></p>
+                    </div>
+                    <div class="relative   grid grid-cols-6  gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs  2xl:text-sm  font-normal rounded-xs">
+                        <div class="font-bold col-start-1 col-end-3 flex justify-between items-center">
+                            <p class="mr-2"><img src="../images/insh-company-2.png"
+                                                 alt="company logo"></p>
+                            <p class="flex flex-col items-start"><span class="text-md">PromTransInvest</span> <span  class="text-xs">17364398438934039409 (Tax ID)</span></p>
+                        </div>
+                        <p class="font-normal">21 Feb 2018</p>
+                        <p class="font-normal">20 Feb 2020</p>
+                        <p class="font-normal">UK</p>
+                        <p class="text-indigo-600 font-normal cursor-pointer"></p>
+                    </div>
+                </div>
+                <!-- details block end-->
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script src="../left-menu.js"></script>
+</body>
+</html>
