@@ -100,36 +100,37 @@
                             JSON
                         </button>
                     </p>
-                    <pre class="content-for-button show">
-{
-   "results" : [
-      {
-         "address_components" : [
-            {
-               "long_name" : "1600",
-               "short_name" : "1600",
-               "types" : [ "street_number" ]
-            },
-            {
-               "long_name" : "Amphitheatre Pkwy",
-               "short_name" : "Amphitheatre Pkwy",
-               "types" : [ "route" ]
-            },
-            {
-               "long_name" : "Mountain View",
-               "short_name" : "Mountain View",
-               "types" : [ "locality", "political" ]
-            },
-            {
-               "long_name" : "Santa Clara County",
-               "short_name" : "Santa Clara County",
-               "types" : [ "administrative_area_level_2", "political" ]
+<pre class="content-for-button show">
+
+&lt;?xml version="1.0"?&gt;<br>
+&lt;API&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;TITLE&gt; Api #1 &lt;/TITLE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;CODE&gt; 255325ttwt2355235252 &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;TITLE&gt;  Api #2 &lt;/TITLE&gt;<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;CODE&gt; 2421441414212434414214 &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;TITLE&gt;  Api #3 &lt;/TITLE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;CODE&gt; 42141421441414234 &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;TITLE&gt;  Api #4 &lt;/TITLE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;CODE&gt; 432$53434346654654636 &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;TITLE&gt;  Api #5 &lt;/TITLE&gt;<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;CODE&gt; 4ththwt4wt43636452525253 &lt;/CODE&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/CODE&gt;<br>
+&lt;/CODE&gt;<br>
 
 </pre>
                     <pre class="content-for-button hidden">
 
-	{
-   "results2 CODE 2" : [
+{
+   "results" : [
       {
          "address_components" : [
             {
@@ -166,28 +167,6 @@
     </div>
 </div>
 <script src="../left-menu.js"></script>
-<script>
-    const buttonClick = document.querySelector(".double-buttons")
-    buttonClick.querySelector(".button-left").addEventListener("click",(event)=>{
-        buttonClick.querySelector(".button-right").classList.toggle("bg-opacity-50")
-        buttonClick.querySelector(".button-right").classList.toggle("bg-opacity-100")
-        switcher(event)
-    })
-    buttonClick.querySelector(".button-right").addEventListener("click",(event)=>{
-        buttonClick.querySelector(".button-left").classList.toggle("bg-opacity-100")
-        buttonClick.querySelector(".button-left").classList.toggle("bg-opacity-50")
-        switcher(event)
-    })
-    function switcher(event){
-        event.target.classList.toggle("bg-opacity-100")
-        event.target.classList.toggle("bg-opacity-50")
-        const buttonHidden = event.target.parentNode.parentNode.querySelector(".content-for-button.hidden")
-        const buttonShow = event.target.parentNode.parentNode.querySelector(".content-for-button.show")
-        buttonHidden.classList.toggle("hidden")
-        buttonHidden.classList.toggle("show")
-        buttonShow.classList.toggle("hidden")
-        buttonShow.classList.toggle("show")
-    }
-</script>
+<script src="../token-page-switcher.js"></script>
 </body>
 </html>
