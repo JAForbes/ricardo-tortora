@@ -76,22 +76,87 @@
 
                 <p class="text-xl mb-4 font-normal w-full text-left">This request demonstrates using the XML output
                     flag:</p>
-                <p class="relative w-2/3 bg-purple-300 bg-opacity-75 rounded p-2 mb-6 text-base">
-                    block1
+                <p class="relative w-3/5 bg-purple-300 bg-opacity-75 rounded p-3 mb-6 text-base">
+                    <span>https://polizzacerta.com/contracts/xml?adress-1689+Promtransinvest+lorem ipsum,CA&key=[YOUR_API_KEY]</span>
                     <img class="w-4 absolute top-2 right-2" src="../images/save.png" alt="save">
                 </p>
 
                 <p class="text-xl mb-4 font-normal w-full text-left">Your personal API key:</p>
-                <p class="relative w-2/3 bg-purple-300 bg-opacity-75 rounded p-2 mb-6 text-base">
-                    block2
+                <p class="relative w-3/5 bg-purple-300 bg-opacity-75 rounded p-3 mb-6 text-base">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
                     <img class="w-4 absolute top-2 right-2" src="../images/save.png" alt="save">
                 </p>
 
                 <p class="text-xl mb-4 font-normal w-full text-left">Examples of JSON and XML responses:</p>
-                <p class="relative w-2/3 bg-purple-300  bg-opacity-75 rounded p-2 mb-6 text-base">
-                    block3
+
+                <div class="relative w-3/5 bg-purple-300  bg-opacity-75 rounded p-3 mb-6 text-base">
+                    <p class="double-buttons">
+                        <button class="button-left mb-5  items-center justify-center py-2 px-4 bg-indigo-600 bg-opacity-100 text-white text-xs rounded-l-md   ">
+                            <!--focus:outline-none  focus:border-indigo-600 focus:border focus:bg-opacity-50-->
+                            XML
+                        </button>
+                        <button class="button-right mb-5 relative -left-1 items-center justify-center py-2 px-4 bg-indigo-600 bg-opacity-50 text-white text-xs rounded-r-md  ">
+                            <!--focus:outline-none  focus:border-indigo-600 focus:border focus:bg-opacity-100 -->
+                            JSON
+                        </button>
+                    </p>
+                    <pre class="content-for-button show">
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "1600",
+               "short_name" : "1600",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Amphitheatre Pkwy",
+               "short_name" : "Amphitheatre Pkwy",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Mountain View",
+               "short_name" : "Mountain View",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Santa Clara County",
+               "short_name" : "Santa Clara County",
+               "types" : [ "administrative_area_level_2", "political" ]
+
+</pre>
+                    <pre class="content-for-button hidden">
+
+	{
+   "results2 CODE 2" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "1600",
+               "short_name" : "1600",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Amphitheatre Pkwy",
+               "short_name" : "Amphitheatre Pkwy",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Mountain View",
+               "short_name" : "Mountain View",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Santa Clara County",
+               "short_name" : "Santa Clara County",
+               "types" : [ "administrative_area_level_2", "political" ]
+
+</pre>
+
+
                     <img class="w-4 absolute top-2 right-2" src="../images/save.png" alt="save">
-                </p>
+                </div>
 
 
             </div>
@@ -101,5 +166,28 @@
     </div>
 </div>
 <script src="../left-menu.js"></script>
+<script>
+    const buttonClick = document.querySelector(".double-buttons")
+    buttonClick.querySelector(".button-left").addEventListener("click",(event)=>{
+        buttonClick.querySelector(".button-right").classList.toggle("bg-opacity-50")
+        buttonClick.querySelector(".button-right").classList.toggle("bg-opacity-100")
+        switcher(event)
+    })
+    buttonClick.querySelector(".button-right").addEventListener("click",(event)=>{
+        buttonClick.querySelector(".button-left").classList.toggle("bg-opacity-100")
+        buttonClick.querySelector(".button-left").classList.toggle("bg-opacity-50")
+        switcher(event)
+    })
+    function switcher(event){
+        event.target.classList.toggle("bg-opacity-100")
+        event.target.classList.toggle("bg-opacity-50")
+        const buttonHidden = event.target.parentNode.parentNode.querySelector(".content-for-button.hidden")
+        const buttonShow = event.target.parentNode.parentNode.querySelector(".content-for-button.show")
+        buttonHidden.classList.toggle("hidden")
+        buttonHidden.classList.toggle("show")
+        buttonShow.classList.toggle("hidden")
+        buttonShow.classList.toggle("show")
+    }
+</script>
 </body>
 </html>
