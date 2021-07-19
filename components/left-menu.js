@@ -1,3 +1,4 @@
+
 document.querySelector(".new-inner-block").addEventListener("mouseover", () => {
     document.querySelector(".new-inner-menu").classList.add("new-active-block")
     document.querySelector(".new-after").src = `../images/arrow-bottom-menu.png`
@@ -16,3 +17,4 @@ for (let i = 0; i < listLinks.length; i++) {
         event.target.parentNode.classList.add("new-active")
     })
 }
+
