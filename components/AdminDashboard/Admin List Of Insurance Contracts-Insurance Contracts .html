@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../tailwind.css" rel="stylesheet">
+    <link href="../base.css" rel="stylesheet">
+    <style>
+
+    </style>
+    <title>AdminList Of Insurance Contracts - item in menu</title>
+</head>
+<body>
+
+<div class="flex flex-row flex-wrap md:flex-nowrap justify-start items-start w-full min-h-full box-border">
+    <!-- LEFT MENU START-->
+    <div class="w-full md:w-96 p-3 xl:p-5 2xl:p-10 new-bg-purple-100 self-stretch  min-h-screen box-border">
+        <div class="fixed w-60">
+            <div class="flex flex-row flex-nowrap items-center justify-start  mb-10">
+                <img class="w-12 mr-2.5" src="../images/logo.png">
+                <p class="text-lg 2xl:text-2xl tracking-wide text-black">POLIZZACERTA </p>
+            </div>
+            <div>
+                <ul class="new-leftMenu-color">
+                    <li class="flex flex-row flex-nowrap justify-start items-center mb-2 py-3 pl-4 rounded-xl">
+                        <img class="new-leftMenu-icon" src="../images/dashboard-icon.png" alt="icon"><a
+                            href="#">Dashboard</a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl ">
+                        <img
+                                class="new-leftMenu-icon" src="../images/briefcase.png" alt="icon"><a
+                            href="#">Insurance Companies</a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl "><img
+                            class="new-leftMenu-icon" src="../images/contracts-icon.png" alt="icon"><a
+                            href="#">Insurance Contract</a>
+                    </li>
+                    <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3  pl-4 rounded-xl new-inner-block ">
+                        <img
+                                class="new-leftMenu-icon" src="../images/tokens-icon.png" alt="icon">
+                        <a class="new-list" href="#">Changelog</a>
+                        <img
+                                class="new-leftMenu-icon new-after" src="../images/arrow-right-menu.png" alt="icon">
+                        <ul class="new-leftMenu-color new-inner-menu new-active-block">
+                            <li class="flex flex-row flex-nowrap justify-start items-center mb-2 py-3 pl-4 rounded-xl  new-active">
+                                <img class="new-leftMenu-icon" src="../images/folder.png" alt="icon"><a href="#">Insurance
+                                Contracts</a>
+                            </li>
+                            <li class="flex flex-row flex-nowrap  justify-start items-center mb-2 py-3 pl-4 rounded-xl">
+                                <img
+                                        class="new-leftMenu-icon" src="../images/at-sign.png" alt="icon"><a
+                                    href="#">Requests </a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- LEFT MENU END-->
+    <div class="w-full  p-3 xl:p-5 2xl:p-10 box-border">
+        <div class="w-full rounded-xl new-bg-purple-100 h-16 shadow-md flex justify-end py-4 px-8 mb-8">
+            <div class="flex justify-between  items-center">
+                <p class="flex flex-col justify-between items-end "><span
+                        class="text-base text-right">John Doe</span><span class="text-disable text-xs">Admin</span></p>
+                <p><img class="ml-4 rounded-full bg-purple-600 bg-opacity-25" src="../images/avatar.png" alt="avatar">
+                </p>
+            </div>
+        </div>
+
+
+        <div class="w-full flex flex-nowrap justify-content-between mb-6">
+
+            <div class="w-full new-box-shadow rounded-lg   p-3 xl:p-5 2xl:p-10 ">
+                <div class="w-full flex justify-end">
+                    <p class="w-3/12 mb-3 mr-4">
+                        <select
+                                class="bg-white  p-3.5    text-sm font-normal border w-full rounded-lg text-gray-400  focus:outline-none  focus:border-indigo-300 focus:border"
+                        >
+                            <option value="Insurance Company" disabled selected>Insurance Company</option>
+                            <option value="">PromTransInvest</option>
+                            <option value="">Task</option>
+                            <option value="">Imkliva</option>
+                            <option value="">Belgosstrakh</option>
+
+                        </select>
+                    </p>
+
+                    <p class="w-3/12 mb-3"><input
+                            class="bg-white  p-2.5 text-base   text-xs font-normal border w-full rounded-lg placeholder-gray-400 placeholder-opacity-75 focus:outline-none  focus:border-indigo-300 focus:border"
+                            type="search" name="search" placeholder="Search"></p>
+
+                </div>
+                <div class=" grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center new-bg-purple-100 w-full px-6 py-3 bg-gray-200 text-xs  tracking-wide font-bold uppercase rounded">
+                    <p>Contract ID</p>
+                    <p>Policy Number</p>
+                    <p>Insurance Company</p>
+                    <p>IP address</p>
+                    <p class="date-select">
+                        <span class="relative ">Date</span>
+                        <img class="date-select-down-to-up absolute -mt-6 ml-10 transform rotate-180 filter brightness-200 cursor-pointer" src="../images/arrow-bottom-list.png" alt="top">
+                      <img class="date-select-up-to-down  absolute -mt-3 ml-10 cursor-pointer" src="../images/arrow-bottom-list.png" alt="top">
+                    </p>
+                    <p class="time-select">
+                        <span  class="relative">Time</span>
+                        <img class="time-select-down-to-up absolute -mt-6 ml-10 transform rotate-180 filter brightness-200 cursor-pointer" src="../images/arrow-bottom-list.png" alt="top">
+                        <img class="time-select-up-to-down absolute -mt-3 ml-10 cursor-pointer" src="../images/arrow-bottom-list.png" alt="top">
+
+                    </p>
+                </div>
+
+                <div class="details block-close">
+                    <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs   font-normal rounded-xs">
+                        <p>67-RR-980</p>
+                        <p>1837000</p>
+                        <p>PromTransInvest</p>
+                        <p>66.249.64.122</p>
+                        <p>21 Feb 2020</p>
+                        <p>6:05 pm</p>
+                    </div>
+                </div>
+
+                <div class="details  block-close">
+                    <div class="relative mt-2  grid grid-cols-6 gap-y-2 gap-x-5 justify-items-start items-center bg-gray-50 w-full px-6 py-4  text-xs    font-normal rounded-xs">
+                        <p>67-RR-980</p>
+                        <p>1837000</p>
+                        <p>PromTransInvest</p>
+                        <p>66.249.64.122</p>
+                        <p>21 Feb 2020</p>
+                        <p>6:05 pm</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<script src="../left-menu.js"></script>
+
+</body>
+</html>
