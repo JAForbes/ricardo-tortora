@@ -1,12 +1,16 @@
+let flag = true
+document.querySelector(".new-inner-block").querySelector(".new-list").addEventListener("click", () => {
+    if(flag) {
+        document.querySelector(".new-inner-menu").classList.add("new-active-block")
+        document.querySelector(".new-after").src = `../images/arrow-bottom-menu.png`
+        flag = false
+    } else{
+        document.querySelector(".new-inner-menu").classList.remove("new-active-block")
+        document.querySelector(".new-after").src = `../images/arrow-right-menu.png`
+        flag = true
+    }
+})
 
-document.querySelector(".new-inner-block").addEventListener("mouseover", () => {
-    document.querySelector(".new-inner-menu").classList.add("new-active-block")
-    document.querySelector(".new-after").src = `../images/arrow-bottom-menu.png`
-})
-document.querySelector(".new-inner-block").addEventListener("mouseout", () => {
-    document.querySelector(".new-inner-menu").classList.remove("new-active-block")
-    document.querySelector(".new-after").src = `../images/arrow-right-menu.png`
-})
 
 const listLinks = document.querySelectorAll(".new-leftMenu-color>li>a")
 for (let i = 0; i < listLinks.length; i++) {
@@ -17,4 +21,3 @@ for (let i = 0; i < listLinks.length; i++) {
         event.target.parentNode.classList.add("new-active")
     })
 }
-

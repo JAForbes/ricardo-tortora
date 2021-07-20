@@ -207,47 +207,27 @@
 
 
 <script src="../left-menu.js"></script>
+<!--<script src="../admin-list.js"></script>-->
 <script>
-
-
-
-
-    // let isMenuShow = true
-    // const els = document.querySelectorAll(".block-close")
-    // const blocks = document.querySelectorAll(".hidden.grid.grid-cols-1.w-full")
-    // for (let i = 0; i < els.length; i++){
-    //     els[i].addEventListener("click",(event) =>{
-    //         if (isMenuShow ) {
-    //             for (let z = 0; z < blocks.length; z++) {
-    //                 blocks[z].classList.add("hidden")
-    //             }
-    //             event.target.parentNode.parentNode.parentNode.querySelector(".hidden.grid.grid-cols-1.w-full").classList.remove("hidden")
-    //             isMenuShow  = false
-    //         }
-    //         else {
-    //             const blocks = document.querySelectorAll(".grid.grid-cols-1.w-full")
-    //             for (let z = 0; z < blocks.length; z++) {
-    //                 blocks[z].classList.add("hidden")
-    //             }
-    //             //event.target.parentNode.parentNode.parentNode.querySelector(".grid.grid-cols-1.w-full").classList.remove("hidden")
-    //             isMenuShow  = true
-    //         }
-    //     })
-    // }
-
-
-    ////work
     const els = document.querySelectorAll(".block-close")
     const blocks = document.querySelectorAll(".hidden.grid.grid-cols-1.w-full")
+    let listFlag = true
     for (let i = 0; i < els.length; i++){
         els[i].addEventListener("click",(event) =>{
-            for(let z = 0; z < blocks.length; z++){
-                blocks[z].classList.add("hidden")
+            if(listFlag) {
+                for (let z = 0; z < blocks.length; z++) {
+                    blocks[z].classList.add("hidden")
+                }
+                els[i].querySelector(".hidden.grid.grid-cols-1.w-full").classList.remove("hidden")
+            listFlag = false
+            } else {
+                for (let z = 0; z < blocks.length; z++) {
+                    blocks[z].classList.add("hidden")
+                }
+                listFlag = true
             }
-            event.target.parentNode.parentNode.querySelector(".hidden.grid.grid-cols-1.w-full").classList.remove("hidden")
         })
     }
-
 </script>
 
 </body>
